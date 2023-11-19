@@ -67,3 +67,4 @@ while [[ -S ${TMATE_SOCK} ]]; do
         exit 0
     fi
 done
+# https://github.com/P3TERX/ssh2actions/blob/main/tmate2actions.sh
