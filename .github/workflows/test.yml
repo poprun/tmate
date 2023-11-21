@@ -24,7 +24,8 @@ jobs:
     steps:
       - name: Space cleanup and Initialization environment
         run: |
+          cp -f ./actiontmate.sh actiontmate.sh
           mkdir -p ~/work/lede/lede/
-          cp -f ./actiontmate ~/work/lede/lede/.config
+          cp actiontmate.sh ~/work/lede/lede/.config
           cd ~/work/lede/lede/
           ls -a
