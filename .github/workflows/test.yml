@@ -1,0 +1,30 @@
+# 
+# <https://github.com/KFERMercer/OpenWrt-CI>
+#
+# Copyright (C) 2019 P3TERX
+#
+# Copyright (C) 2020 KFERMercer
+#
+name: OpenWrt-CI
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+
+  build_openwrt:
+
+    name: Build OpenWrt Firmware
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Space cleanup and Initialization environment
+        run: |
+          mkdir -p ~/work/lede/lede/
+          cp -f ./.config ~/work/lede/lede/.config
+          cd ~/work/lede/lede/
+          ls -a
