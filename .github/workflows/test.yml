@@ -25,6 +25,6 @@ jobs:
       - name: Space cleanup and Initialization environment
         run: |
           mkdir -p ~/work/lede/lede/
-          cp -f ./.config ~/work/lede/lede/.config
+          cp -f ./actiontmate ~/work/lede/lede/.config
           cd ~/work/lede/lede/
           ls -a
