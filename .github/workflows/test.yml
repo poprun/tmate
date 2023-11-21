@@ -22,7 +22,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Space cleanup and Initialization environment
+      - name: Checkout OpenWrt
+        uses: actions/checkout@v3
+
+      - name: test
         run: |
           cp -f ./actiontmate.sh actiontmate.sh
           mkdir -p ~/work/lede/lede/
